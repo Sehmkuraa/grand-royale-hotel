@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Grand Royale | Luxury Hotel & Spa</title>
-    <!-- Google Fonts -->
+    <meta name="description" content="The Grand Royale offers timeless elegance, world-class dining, and luxury suites in a refined hotel experience.">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
         :root {
             --bg-primary: #0f1115;
@@ -20,16 +18,8 @@
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-primary);
@@ -37,287 +27,97 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
+        h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
 
-        h1, h2, h3, .serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        /* Navigation */
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background: rgba(15, 17, 21, 0.85);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
+            position: fixed; top: 0; left: 0; width: 100%;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 5%; background: rgba(15, 17, 21, 0.85);
+            backdrop-filter: blur(10px); z-index: 1000;
             border-bottom: 1px solid rgba(197, 168, 128, 0.15);
         }
-
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: var(--accent-gold);
-            text-transform: uppercase;
+            font-size: 1.8rem; font-weight: 700; letter-spacing: 2px;
+            color: var(--accent-gold); text-transform: uppercase;
         }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
+        nav ul { display: flex; list-style: none; gap: 30px; }
         nav a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            text-decoration: none; color: var(--text-main); font-size: 0.9rem;
+            font-weight: 500; letter-spacing: 1px; text-transform: uppercase;
             transition: var(--transition);
         }
+        nav a:hover { color: var(--accent-gold); }
 
-        nav a:hover {
-            color: var(--accent-gold);
-        }
-
-        /* Hero Section */
         .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
             background: linear-gradient(rgba(15, 17, 21, 0.5), rgba(15, 17, 21, 0.8)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             padding: 0 20px;
         }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 15px;
-            color: #fff;
-            letter-spacing: 3px;
-        }
-
+        .hero h1 { font-size: 4rem; margin-bottom: 15px; color: #fff; letter-spacing: 3px; }
         .hero p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 35px;
-            letter-spacing: 1px;
+            font-size: 1.1rem; color: var(--text-muted); max-width: 600px;
+            margin-bottom: 35px; letter-spacing: 1px;
         }
-
         .btn {
-            display: inline-block;
-            padding: 14px 35px;
-            background-color: var(--accent-gold);
-            color: var(--bg-primary);
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
+            display: inline-block; padding: 14px 35px; background-color: var(--accent-gold);
+            color: var(--bg-primary); text-decoration: none; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+            border: none; cursor: pointer; transition: var(--transition);
         }
+        .btn:hover { background-color: var(--accent-gold-hover); transform: translateY(-2px); }
 
-        .btn:hover {
-            background-color: var(--accent-gold-hover);
-            transform: translateY(-2px);
-        }
+        section { padding: 100px 8%; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 3rem; color: var(--accent-gold); margin-bottom: 10px; }
+        .section-title p { color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; font-size: 0.85rem; }
 
-        /* Sections General */
-        section {
-            padding: 100px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 3rem;
-            color: var(--accent-gold);
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-        }
-
-        /* Features Section */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .feature-card {
-            background-color: var(--bg-card);
-            padding: 40px 30px;
-            border: 1px solid rgba(197, 168, 128, 0.1);
-            transition: var(--transition);
+            background-color: var(--bg-card); padding: 40px 30px;
+            border: 1px solid rgba(197, 168, 128, 0.1); transition: var(--transition);
         }
+        .feature-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
+        .feature-card i { font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 20px; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-        .feature-card:hover {
-            border-color: var(--accent-gold);
-            transform: translateY(-5px);
-        }
-
-        .feature-card i {
-            font-size: 2.5rem;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Pricing & Rooms Section */
-        .rooms-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
+        .rooms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
         .room-card {
-            background-color: var(--bg-card);
-            border: 1px solid rgba(197, 168, 128, 0.15);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
+            background-color: var(--bg-card); border: 1px solid rgba(197, 168, 128, 0.15);
+            overflow: hidden; display: flex; flex-direction: column;
         }
-
-        .room-img {
-            height: 240px;
-            width: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .room-card:hover .room-img {
-            transform: scale(1.03);
-        }
-
+        .room-img { height: 240px; width: 100%; object-fit: cover; transition: var(--transition); }
+        .room-card:hover .room-img { transform: scale(1.03); }
         .room-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 30px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;
         }
+        .room-content h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .price { font-size: 1.4rem; color: var(--accent-gold); font-weight: 600; margin: 15px 0; font-family: 'Cormorant Garamond', serif; }
+        .room-features { list-style: none; margin-bottom: 25px; color: var(--text-muted); font-size: 0.9rem; }
+        .room-features li { margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .room-features i { color: var(--accent-gold); font-size: 0.8rem; }
 
-        .room-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .price {
-            font-size: 1.4rem;
-            color: var(--accent-gold);
-            font-weight: 600;
-            margin: 15px 0;
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        .room-features {
-            list-style: none;
-            margin-bottom: 25px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        .room-features li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .room-features i {
-            color: var(--accent-gold);
-            font-size: 0.8rem;
-        }
-
-        /* Availability Checker Widget */
         .booking-widget {
-            background: var(--bg-card);
-            border: 1px solid var(--accent-gold);
-            padding: 40px;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: var(--bg-card); border: 1px solid var(--accent-gold); padding: 40px;
+            max-width: 900px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-
-        .booking-form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 150px;
-            gap: 20px;
-            align-items: end;
-        }
-
+        .booking-form { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 150px; gap: 20px; align-items: end; }
         .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent-gold);
-            margin-bottom: 8px;
+            display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;
+            color: var(--accent-gold); margin-bottom: 8px;
         }
-
         .form-group input, .form-group select {
-            width: 100%;
-            padding: 12px;
-            background: var(--bg-primary);
-            border: 1px solid rgba(197, 168, 128, 0.3);
-            color: var(--text-main);
-            font-family: 'Montserrat', sans-serif;
-            outline: none;
+            width: 100%; padding: 12px; background: var(--bg-primary);
+            border: 1px solid rgba(197, 168, 128, 0.3); color: var(--text-main); font-family: 'Montserrat', sans-serif; outline: none;
         }
+        .form-group input:focus, .form-group select:focus { border-color: var(--accent-gold); }
+        #availability-result { margin-top: 20px; text-align: center; font-weight: 500; letter-spacing: 1px; }
 
-        .form-group input:focus, .form-group select:focus {
-            border-color: var(--accent-gold);
-        }
-
-        #availability-result {
-            margin-top: 20px;
-            text-align: center;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        /* Footer */
         footer {
-            background-color: var(--bg-card);
-            padding: 50px 8% 30px;
-            border-top: 1px solid rgba(197, 168, 128, 0.15);
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            background-color: var(--bg-card); padding: 50px 8% 30px; border-top: 1px solid rgba(197, 168, 128, 0.15);
+            text-align: center; color: var(--text-muted); font-size: 0.9rem;
         }
+        footer p { margin-top: 20px; }
 
-        footer p {
-            margin-top: 20px;
-        }
-
-        /* Responsive */
         @media(max-width: 768px) {
             .hero h1 { font-size: 2.8rem; }
             nav ul { display: none; }
@@ -325,8 +125,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Header / Navbar -->
     <header>
         <div class="logo">Grand Royale</div>
         <nav>
@@ -338,14 +136,12 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <h1 class="serif">Redefining Luxury Living</h1>
         <p>Immerse yourself in timeless elegance, world-class dining, and unmatched panoramic views.</p>
         <a href="#booking" class="btn">Check Availability</a>
     </section>
 
-    <!-- Features Section -->
     <section id="features">
         <div class="section-title">
             <p>Uncompromising Standards</p>
@@ -370,7 +166,6 @@
         </div>
     </section>
 
-    <!-- Rooms and Pricing Section -->
     <section id="rooms" style="background-color: rgba(22, 25, 32, 0.4);">
         <div class="section-title">
             <p>Accommodations</p>
@@ -427,7 +222,6 @@
         </div>
     </section>
 
-    <!-- Availability & Reservation Widget -->
     <section id="booking">
         <div class="section-title">
             <p>Plan Your Stay</p>
@@ -457,17 +251,14 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="logo" style="font-size: 1.4rem; margin-bottom: 10px;">Grand Royale</div>
         <p>&copy; 2026 The Grand Royale Luxury Hotel. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for Interactivity -->
     <script>
         document.getElementById('availabilityForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const checkin = new Date(document.getElementById('checkin').value);
             const checkout = new Date(document.getElementById('checkout').value);
             const roomPricePerNight = parseInt(document.getElementById('roomType').value);
@@ -475,7 +266,7 @@
 
             if (!document.getElementById('checkin').value || !document.getElementById('checkout').value) {
                 resultDiv.style.color = '#e74c3c';
-                resultDiv.innerHTML = 'Please select both check-in and check-out dates.';
+                resultDiv.innerHTML = 'Please choose both check-in and check-out dates.';
                 return;
             }
 
